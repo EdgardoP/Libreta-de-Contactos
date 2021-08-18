@@ -1,5 +1,6 @@
 body {
     font-family: "Roboto-Thin";
+    margin: 0px 7% 0px 7%;
 }
 
 @font-face {
@@ -18,14 +19,14 @@ body {
 }
 
 .forma {
-    background-color: #029766;
+    background-color: #00B59E;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
-    box-shadow: #646464 2px 2px 10px;
+    box-shadow: #646464 2px 2px 5px;
 }
 
 .forma input {
@@ -51,6 +52,7 @@ body {
     border-color: transparent;
     cursor: pointer;
     -webkit-transition: 0.3s;
+    transition: 0.1s;
     border-radius: 200px;
 }
 
@@ -62,4 +64,53 @@ body {
 .forma label {
     font-size: 17px;
     font-weight: bold;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contactos {
+    width: 90%;
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.botones button {
+    margin: 30px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10%;
+    border-radius: 10px;
+    box-shadow: #646464 2px 2px 5px;
+    font-size: medium;
+    cursor: pointer;
+    border: none;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.botones button:hover {
+    background-color: #ffffff;
+    transition: 0.4s;
+}
+
+.botones .nuevo {
+    background-color: #00B59E;
+}
+
+.botones .editar {
+    background-color: #FAC75A;
+}
+
+.botones .eliminar {
+    background-color: #DF5C48;
 }
