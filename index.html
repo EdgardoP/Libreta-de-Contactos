@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -28,8 +28,12 @@
             </form>
         </section>
         <section class="contenido">
-            <div class="contactos">
-                <h2>Tu libreta esta vacia</h2>
+            <div class="formulario">
+                <h3>Ingrese los datos:</h3>
+                <input type="text" class="id" placeholder="Id">
+                <input type="text" class="nombre" placeholder="Nombre">
+                <input type="text" class="telefono" placeholder="Telefono">
+                <input type="text" class="direccion" placeholder="Direccion">
             </div>
             <div class="botones">
                 <button class="nuevo">Nuevo<i class="material-icons">add</i></button>
@@ -37,7 +41,12 @@
                 <button class="eliminar">Eliminar<i class="material-icons">delete</i></button>
             </div>
         </section>
+        <div class="listado">
+
+        </div>
     </main>
+    <script src="scripts/funciones.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
