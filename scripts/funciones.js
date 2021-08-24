@@ -39,3 +39,13 @@ const crearContacto = (parentNode, contacto, db) => {
     //añadimos el elemento div al dom de html
     parentNode.appendChild(divContacto)
 }
+
+//funcion para abrir el modal 
+const funcionModal = (parametro) => {
+    const modal = document.querySelector('.modal')
+    if (parametro == "abrir") {
+        modal.style.display = "block";
+    } else if (parametro == "cerrar") {
+        modal.style.display = "none"
+    }
+}

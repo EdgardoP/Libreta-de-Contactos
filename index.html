@@ -14,10 +14,24 @@
 </head>
 
 <body>
+    <div class="modal">
+        <div class="contenidoModal">
+            <div class="modalHeader">
+                <h2> ! Algo ha salido mal !</h2>
+                <span class="btnCerrarModal">
+                    <i class="material-icons">close</i>
+                </span>
+            </div>
+            <div class="cuerpoModal">
+                <p>No puedes dejar espacios en blanco.</p>
+                <p>Intentalo de nuevo llenado el formulario de forma correcta.</p>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <h1>Lista de Contactos</h1>
     </header>
-    <main>
+    <main class="main">
         <section class="busqueda">
             <form action="" class="forma">
                 <label for="buscar">Buscar: </label>
@@ -30,7 +44,7 @@
         <section class="contenido">
             <div class="formulario">
                 <h3>Ingrese los datos:</h3>
-                <input type="text" class="id" placeholder="Id">
+                <input type="text" class="id" placeholder="Id" disabled>
                 <input type="text" class="nombre" placeholder="Nombre">
                 <input type="text" class="telefono" placeholder="Telefono">
                 <input type="text" class="direccion" placeholder="Direccion">

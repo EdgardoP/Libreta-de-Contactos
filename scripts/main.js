@@ -11,18 +11,22 @@ const valorDireccion = document.getElementsByClassName('direccion')
 const btnLimpiar = document.querySelector('.limpiar')
 const btnBorrar = document.querySelector('.eliminar')
 const btnModificar = document.querySelector('.editar')
+const btnCerrarModal = document.querySelector('.btnCerrarModal')
     //acceder a la local storage del navegador
 const db = window.localStorage
-
-//evento para capturar los valores de los inputs
+    //evento para capturar los valores de los inputs
 btnNuevo.onclick = () => {
-    let contacto = {
-        id: id.value,
-        nombre: nombre.value,
-        telefono: telefono.value,
-        direccion: direccion.value,
+    if (id.value != "" || nombre.value == "" || telefono.value == "" || direccion.value == "") {
+        funcionModal("abrir")
+    } else {
+        let contacto = {
+            id: Math.floor(Math.random() * 2000),
+            nombre: nombre.value,
+            telefono: telefono.value,
+            direccion: direccion.value,
+        }
+        guardarContacto(db, contacto)
     }
-    guardarContacto(db, contacto)
 }
 
 btnModificar.onclick = () => {
@@ -62,4 +66,8 @@ btnLimpiar.onclick = () => {
 btnBorrar.onclick = () => {
     db.removeItem(id.value)
     window.location.href = '/'
+}
+
+btnCerrarModal.onclick = () => {
+    funcionModal("cerrar");
 }

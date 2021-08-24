@@ -1,7 +1,3 @@
-body {
-    margin: 0px 7% 0px 7%;
-}
-
 html {
     font-family: 'Roboto', sans-serif;
 }
@@ -81,6 +77,10 @@ html {
     justify-content: center;
 }
 
+.id {
+    background-color: #DCE1DF;
+}
+
 .botones {
     display: flex;
     flex-direction: column;
@@ -144,7 +144,46 @@ html {
     cursor: pointer;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #0000008a;
+}
+
+.contenidoModal {
+    background-color: #FFFFFF;
+    box-shadow: #353535 2px 2px 5px;
+    position: relative;
+    border-radius: 10px;
+    font-weight: bold;
+    -webkit-animation-name: mostrar;
+    -webkit-animation-duration: 0.4s;
+    animation-name: mostrar;
+    animation-duration: 0.4s;
+}
+
+.modalHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnCerrarModal {
+    cursor: pointer;
+}
+
 @media (min-width:768px) {
+    body {
+        margin: 0px;
+    }
+    .main {
+        margin: 5% 10% 5% 10%;
+    }
     .contenido {
         margin-top: 3%;
         padding: 2%;
@@ -166,9 +205,41 @@ html {
         margin-bottom: 10%;
         font-size: medium;
     }
+    .modal {
+        padding-top: 30%;
+        padding-left: 20%;
+    }
+    .contenidoModal {
+        width: 500px;
+        padding: 20px;
+        position: relative;
+    }
+    @-webkit-keyframes mostrar {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+    @keyframes mostrar {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
 }
 
 @media (min-width:1440px) {
+    .main {
+        margin: 2% 20% 10% 20%;
+    }
     .contenido {
         padding: 2%;
     }
@@ -183,9 +254,38 @@ html {
     }
     .botones button {
         border-radius: 10px;
-        width: 200px;
-        height: 70px;
+        width: 170px;
+        height: 50px;
         margin-bottom: 10%;
-        font-size: larger;
+        font-size: medium;
+    }
+    .modal {
+        padding-top: 16%;
+        padding-left: 35%;
+    }
+    .contenidoModal {
+        width: 500px;
+        padding: 20px;
+        position: relative;
+    }
+    @-webkit-keyframes mostrar {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+    @keyframes mostrar {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+        to {
+            top: 0;
+            opacity: 1;
+        }
     }
 }
