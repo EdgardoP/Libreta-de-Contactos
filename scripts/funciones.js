@@ -14,7 +14,7 @@ const cargarContactos = (db, parentNode) => {
 const crearContacto = (parentNode, contacto, db) => {
     //Crear los elementos html
     let divContacto = document.createElement('div')
-    let idContacto = document.createElement('h3')
+    let idContacto = document.createElement('h4')
     let nombreContacto = document.createElement('p')
     let telefonoContacto = document.createElement('p')
     let direccionContacto = document.createElement('p')
@@ -27,8 +27,10 @@ const crearContacto = (parentNode, contacto, db) => {
 
     //añadir las clase a los elementos de html
     divContacto.classList.add('contacto')
-
-    //añadir los elementos hijo al elemeento padre, en este caso DivContacto
+    nombreContacto.classList.add('nombre')
+    telefonoContacto.classList.add('telefono')
+    direccionContacto.classList.add('direccion')
+        //añadir los elementos hijo al elemeento padre, en este caso DivContacto
     divContacto.appendChild(idContacto)
     divContacto.appendChild(nombreContacto)
     divContacto.appendChild(telefonoContacto)

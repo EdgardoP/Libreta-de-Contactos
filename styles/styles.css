@@ -116,15 +116,19 @@ html {
 }
 
 .botones .nuevo {
-    background-color: rgb(87, 248, 87);
+    background-color: #E7F49F;
 }
 
 .botones .editar {
     background-color: #FAC75A;
 }
 
+.botones .limpiar {
+    background-color: #F38047;
+}
+
 .botones .eliminar {
-    background-color: #DF5C48;
+    background-color: #EC4436;
 }
 
 .contacto {
@@ -137,6 +141,7 @@ html {
     border-radius: 10px;
     background-color: #9cbeba;
     box-shadow: #646464 2px 2px 5px;
+    cursor: pointer;
 }
 
 @media (min-width:768px) {
