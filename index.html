@@ -17,14 +17,14 @@
     <div class="modal">
         <div class="contenidoModal">
             <div class="modalHeader">
-                <h2> ! Algo ha salido mal !</h2>
+                <h2 class="tituloModal"> ! Algo ha salido mal !</h2>
                 <span class="btnCerrarModal">
                     <i class="material-icons">close</i>
                 </span>
             </div>
             <div class="cuerpoModal">
-                <p>No puedes dejar espacios en blanco.</p>
-                <p>Intentalo de nuevo llenado el formulario de forma correcta.</p>
+                <p class="mensajeModal">No puedes dejar espacios en blanco.</p>
+                <p>Intentalo de nuevo.</p>
             </div>
         </div>
     </div>
@@ -35,8 +35,8 @@
         <section class="busqueda">
             <form action="" class="forma">
                 <label for="buscar">Buscar: </label>
-                <input type="text" name="buscar" id="">
-                <button>
+                <input type="text" class="buscar" id="">
+                <button class="btnBuscar" type="button">
                     <i class="material-icons">search</i>
                 </button>
             </form>
@@ -57,6 +57,8 @@
             </div>
         </section>
         <div class="listado">
+        </div>
+        <div class="listadoBusqueda">
         </div>
     </main>
     <script src="scripts/funciones.js"></script>

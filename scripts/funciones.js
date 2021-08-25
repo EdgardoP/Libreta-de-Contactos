@@ -30,7 +30,8 @@ const crearContacto = (parentNode, contacto, db) => {
     nombreContacto.classList.add('nombre')
     telefonoContacto.classList.add('telefono')
     direccionContacto.classList.add('direccion')
-        //añadir los elementos hijo al elemeento padre, en este caso DivContacto
+
+    //añadir los elementos hijo al elemeento padre, en este caso DivContacto
     divContacto.appendChild(idContacto)
     divContacto.appendChild(nombreContacto)
     divContacto.appendChild(telefonoContacto)
@@ -48,4 +49,21 @@ const funcionModal = (parametro) => {
     } else if (parametro == "cerrar") {
         modal.style.display = "none"
     }
+}
+
+const buscarContacto = (parentNode, db, parametro) => {
+    let claves = Object.keys(db)
+    for (clave of claves) {
+        let contacto = JSON.parse(db.getItem(clave))
+        if (parametro == contacto.nombre) {
+            crearContacto(parentNode, contacto, db)
+        }
+
+    }
+}
+
+//Funcion borrar espacios vacios y pasar la primera letra de cada palabra a Mayuscula
+const corregirCadena = (cadena) => {
+    const nuevaCadena = cadena.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase()))).trim();
+    return nuevaCadena
 }
