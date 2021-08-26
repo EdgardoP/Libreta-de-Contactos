@@ -51,6 +51,15 @@ const funcionModal = (parametro) => {
     }
 }
 
+const funcionModalEliminar = (parametro) => {
+    const modal = document.querySelector('.modalEliminar')
+    if (parametro == "abrir") {
+        modal.style.display = "block";
+    } else if (parametro == "cerrar") {
+        modal.style.display = "none"
+    }
+}
+
 const buscarContacto = (parentNode, db, parametro) => {
     let claves = Object.keys(db)
     for (clave of claves) {

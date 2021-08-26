@@ -17,52 +17,64 @@
     <div class="modal">
         <div class="contenidoModal">
             <div class="modalHeader">
-                <h2 class="tituloModal"> ! Algo ha salido mal !</h2>
+                <h2 class="tituloModal"> Algo ha salido mal ! </h2>
                 <span class="btnCerrarModal">
                     <i class="material-icons">close</i>
                 </span>
             </div>
             <div class="cuerpoModal">
                 <p class="mensajeModal">No puedes dejar espacios en blanco.</p>
-                <p>Intentalo de nuevo.</p>
+                <p class="error">Intentalo de nuevo.</p>
             </div>
         </div>
     </div>
-    <header class="header">
+    <div class="modalEliminar">
+        <div class="contenidoModalEliminar">
+            <div class="modalHeaderEliminar">
+                <h2 class="tituloModalEliminar"> Advertencia</h2>
+            </div>
+            <div class="cuerpoModalEliminar">
+                <p class="mensajeModalEliminar"></p>
+                <button type="button" class="btnModalEliminarSi">Aceptar</button>
+                <button type="button" class="btnModalEliminarNo">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <header class=" header ">
         <h1>Lista de Contactos</h1>
     </header>
-    <main class="main">
-        <section class="busqueda">
-            <form action="" class="forma">
-                <label for="buscar">Buscar: </label>
-                <input type="text" class="buscar" id="">
-                <button class="btnBuscar" type="button">
-                    <i class="material-icons">search</i>
+    <main class="main ">
+        <section class="busqueda ">
+            <form action=" " class="forma ">
+                <label for="buscar ">Buscar: </label>
+                <input type="text " class="buscar " id=" ">
+                <button class="btnBuscar " type="button">
+                    <i class="material-icons ">search</i>
                 </button>
             </form>
         </section>
-        <section class="contenido">
-            <div class="formulario">
+        <section class="contenido ">
+            <div class="formulario ">
                 <h3>Ingrese los datos:</h3>
-                <input type="text" class="id" placeholder="Id" disabled>
-                <input type="text" class="nombre" placeholder="Nombre">
-                <input type="text" class="telefono" placeholder="Telefono">
-                <input type="text" class="direccion" placeholder="Direccion">
+                <input type="text " class="id " placeholder="Id " disabled>
+                <input type="text " class="nombre " placeholder="Nombre ">
+                <input type="text " class="telefono " placeholder="Telefono ">
+                <input type="text " class="direccion " placeholder="Direccion ">
             </div>
-            <div class="botones">
-                <button class="nuevo">Nuevo<i class="material-icons">add</i></button>
-                <button class="editar">Modificar<i class="material-icons">edit</i></button>
-                <button class="limpiar">Limpiar<i class="material-icons">backspace</i></button>
-                <button class="eliminar">Eliminar<i class="material-icons">delete</i></button>
+            <div class="botones ">
+                <button class="nuevo ">Nuevo<i class="material-icons ">add</i></button>
+                <button class="editar ">Modificar<i class="material-icons ">edit</i></button>
+                <button class="limpiar ">Limpiar<i class="material-icons ">backspace</i></button>
+                <button class="eliminar ">Eliminar<i class="material-icons ">delete</i></button>
             </div>
         </section>
-        <div class="listado">
+        <div class="listado ">
         </div>
-        <div class="listadoBusqueda">
+        <div class="listadoBusqueda ">
         </div>
     </main>
-    <script src="scripts/funciones.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/funciones.js "></script>
+    <script src="scripts/main.js "></script>
 </body>
 
 </html>
