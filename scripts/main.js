@@ -5,7 +5,7 @@ const direccion = document.querySelector('.direccion')
 const btnNuevo = document.querySelector('.nuevo')
 const listarContactos = document.querySelector('.listado')
 const listadoBusqueda = document.querySelector('.listadoBusqueda')
-const identificador = document.getElementsByTagName('h4')
+const identificador = document.getElementsByTagName('h3')
 const valorNombre = document.getElementsByClassName('nombre')
 const valorTelefono = document.getElementsByClassName('telefono')
 const valorDireccion = document.getElementsByClassName('direccion')
@@ -28,12 +28,8 @@ const db = window.localStorage
 btnNuevo.onclick = () => {
     if (id.value != "") {
         mensajeModal.innerHTML = "No agregar un elemento que tenga un ID que ya exista."
-        tituloModal.innerHTML = "Algo salio mal !"
-        mensajeError.innerHTML = "Intentalo de nuevo"
         funcionModal("abrir")
     } else if (nombre.value == "" || telefono.value == "" || direccion.value == "") {
-        tituloModal.innerHTML = "Algo salio mal !"
-        mensajeError.innerHTML = "Intentalo de nuevo"
         mensajeModal.innerHTML = "No puedes dejar espacios en blanco."
         funcionModal("abrir")
     } else {
@@ -49,8 +45,6 @@ btnNuevo.onclick = () => {
 
 btnModificar.onclick = () => {
     if (id.value == "") {
-        tituloModal.innerHTML = "Algo salio mal !"
-        mensajeError.innerHTML = "Intentalo de nuevo"
         mensajeModal.innerHTML = "Elije primero el contacto a modificar."
         funcionModal("abrir")
     } else if (id.value == "" || nombre.value == "" || telefono.value == "" || direccion.value == "") {
@@ -75,13 +69,11 @@ window.onload = function() {
         mensajeModal.innerHTML = "Al parecer no tienes contactos, agrega uno."
         mensajeError.innerHTML = "Disfruta de la aplicacion."
     } else {
-        tituloModal.innerHTML = "Algo salio mal !"
-        mensajeError.innerHTML = "Intentalo de nuevo"
         cargarContactos(db, listarContactos)
-        let contacto = document.querySelectorAll('.contacto')
+        let contacto = document.querySelectorAll('.estiloContacto')
         for (let index = 0; index < contacto.length; index++) {
             contacto[index].addEventListener("click", function() {
-                id.value = identificador[index].innerHTML
+                id.value = identificador[index + 1].innerHTML.replace(/ID: /g, '');
                 nombre.value = valorNombre[index + 1].innerHTML
                 telefono.value = valorTelefono[index + 1].innerHTML
                 direccion.value = valorDireccion[index + 1].innerHTML
@@ -101,8 +93,6 @@ btnLimpiar.onclick = () => {
 
 btnBorrar.onclick = () => {
     if (id.value == "") {
-        tituloModal.innerHTML = "Algo salio mal !"
-        mensajeError.innerHTML = "Intentalo de nuevo"
         mensajeModal.innerHTML = "No has seleccionado ningun contacto para eliminar"
         funcionModal('abrir')
     } else {
@@ -112,6 +102,8 @@ btnBorrar.onclick = () => {
 }
 
 btnCerrarModal.onclick = () => {
+    tituloModal.innerHTML = "Algo salio mal !"
+    mensajeError.innerHTML = "Intentalo de nuevo"
     funcionModal("cerrar");
 }
 

@@ -131,18 +131,37 @@ html {
     background-color: #EC4436;
 }
 
-.contacto {
+.main h3 {
+    margin: 0%;
+}
+
+
+/*Estos son los estilos que hay que poner */
+
+.estiloContacto {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    font-weight: bolder;
-    margin-top: 2%;
-    padding: 0px 3% 0px 3%;
-    border-radius: 10px;
-    background-color: #9cbeba;
+    margin: 20px 0px 20px 0px;
     box-shadow: #646464 2px 2px 5px;
+    padding: 10px;
+    background-color: #00B59E;
+    border-radius: 10px;
+    font-weight: bolder;
     cursor: pointer;
 }
+
+.seccionContacto {
+    width: 20%;
+}
+
+.material-icons.md-48 {
+    font-size: 60px;
+    color: #ffffff;
+}
+
+
+/*hasta aqui es el pedo */
 
 .modal {
     display: none;

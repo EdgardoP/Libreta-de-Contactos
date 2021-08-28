@@ -14,30 +14,56 @@ const cargarContactos = (db, parentNode) => {
 const crearContacto = (parentNode, contacto, db) => {
     //Crear los elementos html
     let divContacto = document.createElement('div')
-    let idContacto = document.createElement('h4')
+    let divIcono = document.createElement('div')
+    let divNombre = document.createElement('div')
+    let divCelular = document.createElement('div')
+    let divDireccion = document.createElement('div')
+
+    let spanIcono = document.createElement('span')
+
+    let idContacto = document.createElement('h3')
+    let encNombre = document.createElement('p')
     let nombreContacto = document.createElement('p')
+    let encTel = document.createElement('p')
     let telefonoContacto = document.createElement('p')
+    let encDireccion = document.createElement('p')
     let direccionContacto = document.createElement('p')
 
+
     //añadir el contentido a los elemetos de html
-    idContacto.innerHTML = contacto.id
+    idContacto.innerHTML = "ID: " + contacto.id
     nombreContacto.innerHTML = contacto.nombre
     telefonoContacto.innerHTML = contacto.telefono
     direccionContacto.innerHTML = contacto.direccion
+    spanIcono.innerHTML = "account_circle"
+    encNombre.innerHTML = "Nombre"
+    encTel.innerHTML = "Telefono"
+    encDireccion.innerHTML = "Direccion"
 
     //añadir las clase a los elementos de html
-    divContacto.classList.add('contacto')
+    divContacto.classList.add('estiloContacto')
     nombreContacto.classList.add('nombre')
     telefonoContacto.classList.add('telefono')
     direccionContacto.classList.add('direccion')
+    spanIcono.classList.add("material-icons", "md-48")
+    divIcono.classList.add("seccionContacto")
+    divNombre.classList.add("seccionContacto")
+    divCelular.classList.add("seccionContacto")
+    divDireccion.classList.add("seccionContacto")
 
-    //añadir los elementos hijo al elemeento padre, en este caso DivContacto
-    divContacto.appendChild(idContacto)
-    divContacto.appendChild(nombreContacto)
-    divContacto.appendChild(telefonoContacto)
-    divContacto.appendChild(direccionContacto)
+    divIcono.appendChild(spanIcono)
+    divIcono.appendChild(idContacto)
+    divContacto.appendChild(divIcono)
+    divNombre.appendChild(encNombre)
+    divNombre.appendChild(nombreContacto)
+    divContacto.appendChild(divNombre)
+    divCelular.appendChild(encTel)
+    divCelular.appendChild(telefonoContacto)
+    divContacto.appendChild(divCelular)
+    divDireccion.appendChild(encDireccion)
+    divDireccion.appendChild(direccionContacto)
+    divContacto.appendChild(divDireccion)
 
-    //añadimos el elemento div al dom de html
     parentNode.appendChild(divContacto)
 }
 
